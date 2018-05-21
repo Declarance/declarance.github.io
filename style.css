@@ -1,0 +1,7 @@
+﻿body {
+    background-color: rgb(127,127,127);
+}
+input {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+}
