@@ -1,23 +1,17 @@
----
-layout: default
----
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<!DOCTYPE html>
+<html id="background">
+    <head>
+        <meta charset="utf-8">
+        <link href="/css/style.css" rel="stylesheet" />
+        <title>WEB</title>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1>RGB selector</h1>
+        <div id="top">
+            <input oninput="changeBackgroundColor ()" id="red" type="range" min="0" max="255" step="1" value="127">
+            <input oninput="changeBackgroundColor ()" id="green" type="range" min="0" max="255" step="1" value="127"> 
+            <input oninput="changeBackgroundColor ()" id="blue" type="range" min="0" max="255" step="1" value="127"> 
+        </div>
+    </body>
+</html>
