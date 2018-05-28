@@ -3,15 +3,19 @@
     <head>
         <meta charset="utf-8">
         <link href="/css/style.css" rel="stylesheet" />
-        <title>WEB</title>
+        <title>background-color</title>
         <script src="js/script.js"></script>
     </head>
     <body>
         <h1>RGB selector</h1>
-        <div id="top">
-            <input oninput="changeBackgroundColor ()" id="red" type="range" min="0" max="255" step="1" value="127">
-            <input oninput="changeBackgroundColor ()" id="green" type="range" min="0" max="255" step="1" value="127"> 
-            <input oninput="changeBackgroundColor ()" id="blue" type="range" min="0" max="255" step="1" value="127"> 
+        <div>
+            <table>
+                <tr>
+                    <td><input oninput="changeBackgroundColor ()" id="red" type="range" min="0" max="255" step="1" value="127"></td>
+                    <td><input oninput="changeBackgroundColor ()" id="green" type="range" min="0" max="255" step="1" value="127"></td>
+                    <td><input oninput="changeBackgroundColor ()" id="blue" type="range" min="0" max="255" step="1" value="127"></td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
