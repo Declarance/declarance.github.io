@@ -4,6 +4,16 @@ logo = document.getElementById("logo").style;
 
 audio = document.getElementById("audio");
 
+function preparation(){
+    let AudioContext = window.AudioContext || window.webkitAudioContext;
+    context = new AudioContext();
+    analyser = context.createAnalyser();
+    src = context.createMediaElementSource(audio);
+    src.connect(analyser);
+    analyser.connect(context.destination);
+    loop();
+}
+
 window.onclick = function(){
     if(!context){
         preparation();
@@ -14,17 +24,6 @@ window.onclick = function(){
     }else{
         audio.pause();
     }
-    preparation();
-    audio.play();
-}
-
-function preparation(){
-    context = new AudioContext();
-    analyser = context.createAnalyser();
-    src = context.createMediaElementSource(audio);
-    src.connect(analyser);
-    analyser.connect(context.destination);
-    loop();
 }
 
 function loop(){
